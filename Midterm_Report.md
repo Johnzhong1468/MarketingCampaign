@@ -3,7 +3,7 @@ Marketing Campaign Candidate Analysis Midterm Report
 </h1>
 <h4 align="center">
 Yiheng Xiao, Chen Zhong <br><br>
-October 26, 2017
+October 27, 2017
 </h4>
 
 ### Project Introduction
