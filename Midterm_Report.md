@@ -46,8 +46,12 @@ This plot shows the group of people who were only contacted once. We can see aga
 We shrink duration to less than 150 and as expected people are likely to reject when the duration of the call is very short.
 
 ### Initial Model Selections
-
-
+#### General Procedures
+The project focuses on a classification problem, so, we set a hypothesis set $H$ including linear models with regularizers, Logistic regression models, Supporting Vectors Machine as well as Decision trees. To find the model with satisfying explanatory ability, the model selection obeys the following procedures:
+* Fit each model, remove non-significant features.
+* Select the optimal hyper-parameters by cross validation.
+* Compare the Prediction Accuracy computed on traning set and testing set.
+* Analyze results of different models.
 
 ### Future Steps
 * Preserve more data during the cleaning process. For example, treat n/a's as a new category and fill the gap.
