@@ -18,7 +18,7 @@ determine the specific profile of customers who will be more likely to subscribe
 
 ## Data, Initial Processing and Visualization
 * ### Raw Data
-We selected the ["Bank Marketing Data Set"](http://archive.ics.uci.edu/ml/datasets/Bank+Marketing) from UCI Machine Learning repository. The data is taken from the direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. The data set consists of a list of 45211 samples with 20 features. We are interested in whether we can predict the "y" feature, which is the whether the particular sample subscribed to the product or not, using all other features given about that particular sample. Below is a list of several important features (Not all features):
+We selected the ["Bank Marketing Data Set"] from UCI Machine Learning repository. The data is taken from the direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. The data set consists of a list of 45211 samples with 20 features. We are interested in whether we can predict the "y" feature, which is the whether the particular sample subscribed to the product or not, using all other features given about that particular sample. Below is a list of several important features (Not all features):
 
 | Bank Client data   | Description      |Type|
 |--------------------|:-----------------|:-----------------|
