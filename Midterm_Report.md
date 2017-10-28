@@ -69,22 +69,24 @@ For our models, we initially fit a single decision tree as a pilot trial. We all
 
 ![plot](https://github.com/Johnzhong1468/MarketingCampaign/blob/master/tree.PNG)<br>
 
-For our random forest model, we used 10 trees (especially less than the number of features) in our forest. We set trees to grow to a maximum depth of 25 andassigned trees to randomly pick the square root of the total number of features to split upon. We will prune the trees later in the second half of the semester, to boost the prediction. 
+For our random forest model, we used 10 trees (especially less than the number of features) in our forest. We set trees to grow to a maximum depth of 20 andassigned trees to randomly pick the square root of the total number of features to split upon. We will prune the trees later in the second half of the semester, to boost the prediction. 
 
 Random forest is not prone to overfitting since the majority vote prevents weighing heavily on single classification. Moreover, it prevents underfitting since trees are randomly assigned to a subset of features.
 
 ## Summary of Preliminary Results
-Going through the general procedure mentioned in previous part, we fit each model and estimate their performance.
+Going through the general procedure mentioned in previous part, we fit each model and estimate their performance. The critical part of results are listed below. To test the effectiveness, we calculated accuracy as the percentage of correctly classified customers. We found that logistic regression, the SVM and the random forest are able to classify with an accuracy of 89.16%, 88.80% and 87.85%, respectively. 
 
-| Bank Client data   | Description      |
+An indication that the great spread between the accuracy of the test data and training data for random forest is that the model requires further improvement, such as bagging. We will move forward in the second half of the semester.
+
+
+| Model   | accuracy on training set    | accuracy on testing set |Note|
 |--------------------|:-----------------|
-| age | age of clients, numeric |
-| job | type of job, categorical |
-| marital | marital status |
-| education | level of education, categorical |
-| default | whether has credit in default, categorical |
-| housing | whether has housing loan, categorical |
-| loan | whether has personal loan, categorical |
+| Lasso | 0.0422 |N.A. | Discarded|
+| Logistic | 0.8880 | 0.8916| generalization|
+| SVM | 0.8848 | 0.8880|generalization|
+| Single Secision Tree (Max-dep =5) |0.8923 |0.8896|-|
+| Single Secision Tree (Max-dep =20) |0.9702 |0.8432|-|
+| Random Forsts | 0.9572 | 0.8785|generalization|
 
 ## Future Steps
 * Preserve more data during the cleaning process. For example, treat n/a's as a new category and fill the gap.
