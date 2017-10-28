@@ -92,6 +92,7 @@ An indication that the great spread between the accuracy of the test data and tr
 * Preserve more data during the cleaning process. For example, treat n/a's as a new category and fill the gap.
 * Eliminate some redundant features using lasso or other models.
 * Explore the specific effect of particular features
-* A more robust comparison of models
+* A more robust comparison of models, using cross validation, and maybe mix up different models for better result
+* Further examine our models' level of generalization and overfitting, we don't yet have a good metric to determine
 
 > #### 
