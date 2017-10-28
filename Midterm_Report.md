@@ -57,7 +57,19 @@ The project focuses on a classification problem, so, we set a hypothesis set H i
 Lasso regression performs covariate selection as well as improves prediction error by shrinking large regression coefficients in order to reduce overfitting. However, it may not effective in solving classification problems; the accuracy of Lasso is merely 4.22%, which fails to meet our expectation.
 
 ### Logistic Model
-The binary logistic model is designed to estimate a binary response based on predictor features. By cross validation, we calculate the penalty parameter (lamda) that minimizes the percent of misclassifications. Some features are of non-significance. Thus, we prefer to remove them form the model, such as 'euribor3m' and 'nr.employed', in order to 
+The binary logistic model is designed to estimate a binary response based on predictor features. By cross validation, we calculate the penalty parameter (lamda) that minimizes the percent of misclassifications. Some features are of non-significance. Thus, we prefer to remove them form the model, such as 'euribor3m' and 'nr.employed'. After dimension reduction, the acurracy shifts from 0.8875 to 0.8880, namaly, discarding ineffective features does not impair the model. The test accuracy is 0.8916.
+
+### Support Vector Machine
+Another typical classification we considered is SVM. Using one-hot-encoding, we get a sparse matrix of features, and SVM  has proven to offer significant advantages in dealing with large sparse datasets. We optimize the penalty parameter as C=0.6. The training and testing accuracy is 0.8848 and 0.8879, respectively. Thus, SVM provides highly explanatory classifications.
+
+### Random Forests (Decision Trees)
+The way random forest works is that it randomly samples from the training set while maintaining the underling distribution. Then, it creates a series of decisions trees where each tree comprise a fixed amount of variables. Each decision tree is generated maximizing information efficiency (greatest reduction in entropy). In prediction, a majority score(vote) is taken from each group of decision trees to classify each client.
+
+For our models, we initially fit a single decision tree as a pilot trial. We allowed the tree to grow to a max depth of 5, and find that the training and testing accuracy are around 0.88, which does not show the prominence of tree models. This attempt spurs us to increase the max depth and pursue a more flexible model, the random forests.
+
+For our random forest model, we used 10 trees (especially less than the number of features) in our forest. We set trees to grow to a maximum depth of 25 andassigned trees to randomly pick the square root of the total number of features to split upon. We will prune the trees later in the second half of the semester, to boost the prediction. 
+
+Random forest is not prone to overfitting since the majority vote prevents weighing heavily on single classification. Moreover, it prevents underfitting since trees are randomly assigned to a subset of features.
 
 ## Future Steps
 * Preserve more data during the cleaning process. For example, treat n/a's as a new category and fill the gap.
