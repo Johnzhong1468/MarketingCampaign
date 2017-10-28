@@ -45,7 +45,7 @@ This plot shows the group of people who were only contacted once. We can see aga
 ![plot](https://github.com/Johnzhong1468/MarketingCampaign/blob/master/age_dur_scat_shrt.PNG)<br>
 We shrink duration to less than 150 and as expected people are likely to reject when the duration of the call is very short.
 
-## Initial Model Selections and Preliminary Results
+## Initial Model Selections
 ### General Procedures
 The project focuses on a classification problem, so, we set a hypothesis set H including linear models with regularizers, Logistic regression models, Supporting Vectors Machine as well as Decision trees. To find the model with satisfying explanatory ability, the model selection obeys the following procedures:
 * Fit each model in training set, remove non-significant features.
@@ -70,6 +70,19 @@ For our models, we initially fit a single decision tree as a pilot trial. We all
 For our random forest model, we used 10 trees (especially less than the number of features) in our forest. We set trees to grow to a maximum depth of 25 andassigned trees to randomly pick the square root of the total number of features to split upon. We will prune the trees later in the second half of the semester, to boost the prediction. 
 
 Random forest is not prone to overfitting since the majority vote prevents weighing heavily on single classification. Moreover, it prevents underfitting since trees are randomly assigned to a subset of features.
+
+## Summary of Preliminary Results
+Going through the general procedure mentioned in previous part, we fit each model and estimate their performance.
+
+| Bank Client data   | Description      |
+|--------------------|:-----------------|
+| age | age of clients, numeric |
+| job | type of job, categorical |
+| marital | marital status |
+| education | level of education, categorical |
+| default | whether has credit in default, categorical |
+| housing | whether has housing loan, categorical |
+| loan | whether has personal loan, categorical |
 
 ## Future Steps
 * Preserve more data during the cleaning process. For example, treat n/a's as a new category and fill the gap.
