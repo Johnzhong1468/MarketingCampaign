@@ -18,7 +18,7 @@ determine the specific profile of customers who will be more likely to subscribe
 
 ## Data, Initial Processing and Visualization
 * ### Raw Data
-We selected the ["Bank Marketing Data Set"](http://archive.ics.uci.edu/ml/datasets/Bank+Marketing) from UCI Machine Learning repository. The data is taken from the direct marketing campaigns of a Portuguese banking institution (http://archive.ics.uci.edu/ml/datasets/Bank+Marketing). The marketing campaigns were based on phone calls. The data set consists of a list of 45211 samples with 20 features. We are interested in whether we can predict the "y" feature, which is the whether the particular sample subscribed to the product or not, using all other features given about that particular sample. Below is a list of sample important features:
+We selected the ["Bank Marketing Data Set"](http://archive.ics.uci.edu/ml/datasets/Bank+Marketing) from UCI Machine Learning repository. The data is taken from the direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. The data set consists of a list of 45211 samples with 20 features. We are interested in whether we can predict the "y" feature, which is the whether the particular sample subscribed to the product or not, using all other features given about that particular sample. Below is a list of sample important features:
 
 | Bank Client data   | Description      |
 |--------------------|:-----------------|
@@ -67,7 +67,7 @@ The way random forest works is that it randomly samples from the training set wh
 
 For our models, we initially fit a single decision tree as a pilot trial. We allowed the tree to grow to a max depth of 5, and find that the training and testing accuracy are around 0.88, which does not show the prominence of tree models. This attempt spurs us to increase the max depth and pursue a more flexible model, the random forests.
 
-![plot](https://github.com/Johnzhong1468/MarketingCampaign/blob/master/tree.PNG)<br>
+![plot](https://github.com/Johnzhong1468/MarketingCampaign/tree.PNG)<br>
 
 For our random forest model, we used 10 trees (especially less than the number of features) in our forest. We set trees to grow to a maximum depth of 20 andassigned trees to randomly pick the square root of the total number of features to split upon. We will prune the trees later in the second half of the semester, to boost the prediction. 
 
