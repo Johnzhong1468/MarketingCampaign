@@ -80,7 +80,7 @@ An indication that the great spread between the accuracy of the test data and tr
 
 
 | Model   | accuracy on training set    | accuracy on testing set |Note|
-|--------------------|:-----------------|
+|--------------------|:-----------------|:-----------------|:-----------------|
 | Lasso | 0.0422 |N.A. | Discarded|
 | Logistic | 0.8880 | 0.8916| generalization|
 | SVM | 0.8848 | 0.8880|generalization|
