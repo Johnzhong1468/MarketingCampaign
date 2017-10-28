@@ -67,7 +67,7 @@ The way random forest works is that it randomly samples from the training set wh
 
 For our models, we initially fit a single decision tree as a pilot trial. We allowed the tree to grow to a max depth of 5, and find that the training and testing accuracy are around 0.88, which does not show the prominence of tree models. This attempt spurs us to increase the max depth and pursue a more flexible model, the random forests.
 
-![plot](https://github.com/Johnzhong1468/MarketingCampaign/tree.PNG)<br>
+![plot](https://github.com/Johnzhong1468/MarketingCampaign/blob/master/tree.png)<br>
 
 For our random forest model, we used 10 trees (especially less than the number of features) in our forest. We set trees to grow to a maximum depth of 20 andassigned trees to randomly pick the square root of the total number of features to split upon. We will prune the trees later in the second half of the semester, to boost the prediction. 
 
